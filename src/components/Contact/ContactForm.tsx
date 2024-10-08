@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './styles.css'; // Import your CSS file
 
 interface ContactFormProps {
   onContactAdded: () => void;
@@ -32,12 +33,15 @@ const ContactForm: React.FC<ContactFormProps> = ({ onContactAdded }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} />
-      <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
-      <input type="text" name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange} />
-      <button type="submit">Add Contact</button>
-    </form>
+    <div className="contact-form">
+      <h2>Add New Contact</h2>
+      <form onSubmit={handleSubmit}>
+        <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} required />
+        <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+        <input type="text" name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange} required />
+        <button type="submit">Add Contact</button>
+      </form>
+    </div>
   );
 };
 

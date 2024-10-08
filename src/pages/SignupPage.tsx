@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import "./index.css"
 
 const SignupPage: React.FC = () => {
   const [name, setName] = useState('');
@@ -18,6 +19,8 @@ const SignupPage: React.FC = () => {
       return;
     }
 
+    setError(''); // Clear any previous errors
+
     try {
       const response = await axios.post('http://localhost:5000/api/auth/signup', {
         name,
@@ -27,6 +30,8 @@ const SignupPage: React.FC = () => {
 
       if (response.data.success) {
         navigate('/login');
+      } else {
+        setError(response.data.message || 'Error signing up. Please try again.');
       }
     } catch (err) {
       setError('Error signing up. Please try again.');

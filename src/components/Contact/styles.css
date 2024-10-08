@@ -1,0 +1,39 @@
+/* ContactForm.css */
+
+.contact-form {
+    max-width: 400px; /* Set a max width for the form */
+    margin: 20px auto; /* Center the form on the page */
+    padding: 20px; /* Add padding */
+   
+  }
+  
+  .contact-form h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  .contact-form input {
+    width: 100%; /* Full width input fields */
+    padding: 10px; /* Padding inside the input */
+    margin-bottom: 15px; /* Space below each input */
+    border: 1px solid #ccc; /* Border for the input */
+    border-radius: 4px; /* Round corners of input fields */
+    font-size: 16px; /* Font size for the input text */
+  }
+  
+  .contact-form button {
+    width: 105.5%; /* Full width button */
+    padding: 10px; /* Padding inside the button */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Round corners of the button */
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size for button text */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
